@@ -177,7 +177,7 @@ CRITICAL INSTRUCTION: If the attached images are so blurry or completely dark th
       }
     });
 
-    const text = response.text();
+    const text = response.text;
     if (!text) {
       return NextResponse.json({ error: 'Failed to generate content' }, { status: 500 });
     }

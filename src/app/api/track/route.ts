@@ -69,7 +69,7 @@ Respond strictly in the provided JSON format, with text in BENGALI.`;
       }
     });
 
-    const text = response.text();
+    const text = response.text;
     if (!text) {
       return NextResponse.json({ error: 'Failed to analyze meal' }, { status: 500 });
     }
