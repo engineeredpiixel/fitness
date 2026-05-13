@@ -168,7 +168,7 @@ CRITICAL INSTRUCTION: If the attached images are so blurry or completely dark th
     }
 
     const response = await ai.models.generateContent({
-      model: 'gemini-1.5-pro',
+      model: 'gemini-2.5-flash',
       contents: parts,
       config: {
         responseMimeType: "application/json",
