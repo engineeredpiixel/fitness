@@ -48,6 +48,9 @@ export default function FitnessForm() {
     if (!file) return;
 
     const reader = new FileReader();
+    reader.onerror = () => {
+      alert("Error reading file. Please try another image.");
+    };
     reader.onloadend = () => {
       setImages(prev => ({
         ...prev,
@@ -227,7 +230,10 @@ export default function FitnessForm() {
                       id={`upload-${part.id}`} 
                       accept="image/*" 
                       className={styles.hiddenInput} 
-                      onChange={(e) => handleImageUpload(part.id, e)}
+                      onChange={(e) => {
+                        handleImageUpload(part.id, e);
+                        e.target.value = '';
+                      }}
                     />
                   </label>
                 ) : (
