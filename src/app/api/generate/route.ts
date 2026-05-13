@@ -153,10 +153,10 @@ CRITICAL INSTRUCTION: If the attached images are so blurry or completely dark th
         // data:image/jpeg;base64,/9j/4AAQ...
         const matches = dataUrl.match(/^data:image\/([a-zA-Z0-9+.]+);base64,(.+)$/);
         if (matches && matches.length === 3) {
-          const mimeType = \`image/\${matches[1]}\`;
+          const mimeType = `image/${matches[1]}`;
           const base64Data = matches[2];
           
-          parts.push({ text: \`[Image of \${partName}]\` });
+          parts.push({ text: `[Image of ${partName}]` });
           parts.push({
             inlineData: {
               data: base64Data,

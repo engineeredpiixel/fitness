@@ -51,7 +51,7 @@ Respond strictly in the provided JSON format, with text in BENGALI.`;
             parts.push({
               inlineData: {
                 data: matches[2],
-                mimeType: \`image/\${matches[1]}\`
+                mimeType: `image/${matches[1]}`
               }
             });
           }
