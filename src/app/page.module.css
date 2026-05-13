@@ -1,0 +1,83 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Gradients */
+.main::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(230, 57, 70, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+  z-index: 0;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255, 77, 90, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+  z-index: 0;
+}
+
+.heroContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 5vw, 5rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.highlight {
+  color: var(--accent-primary);
+  text-shadow: 0 0 20px rgba(230, 57, 70, 0.4);
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
